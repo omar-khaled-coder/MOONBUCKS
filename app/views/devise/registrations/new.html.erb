@@ -15,6 +15,23 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, autofocus: true %>
+
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+
+      <%= f.label :identification_number %>
+      <%= f.text_field :identification_number %>
+
+
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+
+      <%= f.label :contact_number %>
+      <%= f.text_field :contact_number %>
+
   </div>
 
   <div class="form-actions">
