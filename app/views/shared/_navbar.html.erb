@@ -1,35 +1,65 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-  <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <div class="container-fluid">
+
+    <%= link_to root_path , class: "navbar-brand" do %>
+      <%= image_tag "logo.png" %>
+      <span class="logo-span">MOONBUCKS</span>
+    <% end %>
+
+    <%# <div class="">
+    <div data-searchbar-open="false" class="lkm6i7z l1rzxhu2 lr5v90m dir dir-ltr"><div class="cs3bjhu dir dir-ltr" role="search" data-testid="little-search" aria-labelledby="littleSearchLabel"><button class="ffc0w66 dir dir-ltr" type="button"><div class="f19g2zq0 dir dir-ltr" id="littleSearchLabel">Start your search</div><div class="s19wqnbx dir dir-ltr" data-icon="true" data-testid="little-search-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333px; overflow: visible;" aria-hidden="true" role="presentation" focusable="false"><path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path></svg></div></button></div></div><div class="b3ppcw1 b1t24mo5 b12rw3s8 dir dir-ltr"><div class="_1lveqk8" data-nosnippet="true"><form class="fxxrw3g dir dir-ltr" action="/s/homes" method="get" role="search"><div class="t1h6fwl6 dir dir-ltr"><div role="tablist" aria-label="What can we help you find?"><div class="cmma1qh crqzi50 c1dp4ivy dir dir-ltr"><button id="search-block-tab-false-STAYS" data-testid="header-tab-search-block-tab-false-STAYS" name="refinement_paths[]" role="tab" aria-selected="true" type="button" class="l1ovpqvx b13wj47r v1ri224d dir dir-ltr"><div class="t1dfouid tija6bn dir dir-ltr"><span class="t1u2tvcl dir dir-ltr">Stays</span></div></button><input type="hidden" name="refinement_paths[]" value="/homes"></div><div class="cmma1qh crqzi50 dir dir-ltr"><button id="search-block-tab-false-EXPERIENCES" data-testid="header-tab-search-block-tab-false-EXPERIENCES" name="refinement_paths[]" role="tab" aria-selected="false" type="button" class="l1ovpqvx b13wj47r v1ri224d dir dir-ltr"><div class="t1dfouid dir dir-ltr"><span class="t1u2tvcl dir dir-ltr">Experiences</span></div></button></div></div><div class="wndat0u dir dir-ltr"><a href="/s/experiences/online" class="l1ovpqvx b1isyb64 cpy18wl dir dir-ltr"><div class="c2icxy c5iqeri dir dir-ltr"><div class="t1o7opuo dir dir-ltr">Online Experiences</div></div></a></div></div><div id="search-tabpanel" role="tabpanel" tabindex="0" class="c1lt77mq c1oqx6sn dir dir-ltr" data-panel-bounds="true"><div class="i1wnljx3 dir dir-ltr"><div class="_1jkbosm7"><div class="c11pxvht dir dir-ltr"><label class="in3kizz i1mixo1 i18pj64x dir dir-ltr" for="bigsearch-query-stays_location_inspirations-input"><div class="c1gxtg0q dir dir-ltr"><div class="i1kt4qwh dir dir-ltr">Where</div><input class="ivycze5 dir dir-ltr" aria-autocomplete="none" autocomplete="off" autocorrect="off" spellcheck="false" id="bigsearch-query-stays_location_inspirations-input" name="query" aria-describedby="bigsearch-query-stays_location_inspirations-description" placeholder="Search destinations" required="" data-testid="structured-search-input-field-query" value=""></div></label><span class="hrm8eud dir dir-ltr" id="bigsearch-query-stays_location_inspirations-description">Navigate forward to access suggested results</span><div class="p187tul2 dir dir-ltr"><div class="crko1vu l1doy60l dir dir-ltr" data-testid="structured-search-input-field-query-panel"><section><div class=" dir dir-ltr"><div class="k3s7ijn dir dir-ltr" role="dialog" aria-label="Search suggestions" id="bigsearch-query-stays_location_inspirations-listbox" tabindex="-1"><div class="l1d0r31c dir dir-ltr"><div class="l5mmcz9 dir dir-ltr" id="locationInspirationTitleID">Search by region</div><div class=" dir dir-ltr" role="radiogroup" id="locationInspirationsSectionID" aria-labelledby="locationInspirationTitleID"><div class="ddxkr2l dir dir-ltr"><div class="db6tyt8 dir dir-ltr"><div class="cbt5pty dir dir-ltr"><button class="_1xdsve6" aria-pressed="false" type="button"><img class="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"><span class="a8jt5op dir dir-ltr">I’m flexible</span></button><div><div class="ooa2q3t dir dir-ltr" aria-hidden="true">I’m flexible</div></div></div></div><div class="db6tyt8 dir dir-ltr"><div class="cbt5pty dir dir-ltr"><button class="_1xdsve6" aria-pressed="false" type="button"><img class="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/im/pictures/7b5cf816-6c16-49f8-99e5-cbc4adfd97e2.jpg?im_w=320"><span class="a8jt5op dir dir-ltr">Europe</span></button><div><div class="ooa2q3t dir dir-ltr" aria-hidden="true">Europe</div></div></div></div><div class="db6tyt8 dir dir-ltr"><div class="cbt5pty dir dir-ltr"><button class="_1xdsve6" aria-pressed="false" type="button"><img class="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/im/pictures/ea5598d7-2b07-4ed7-84da-d1eabd9f2714.jpg?im_w=320"><span class="a8jt5op dir dir-ltr">Italy</span></button><div><div class="ooa2q3t dir dir-ltr" aria-hidden="true">Italy</div></div></div></div><div class="db6tyt8 dir dir-ltr"><div class="cbt5pty dir dir-ltr"><button class="_1xdsve6" aria-pressed="false" type="button"><img class="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/im/pictures/4e762891-75a3-4fe1-b73a-cd7e673ba915.jpg?im_w=320"><span class="a8jt5op dir dir-ltr">United States</span></button><div><div class="ooa2q3t dir dir-ltr" aria-hidden="true">United States</div></div></div></div><div class="db6tyt8 dir dir-ltr"><div class="cbt5pty dir dir-ltr"><button class="_1xdsve6" aria-pressed="false" type="button"><img class="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/im/pictures/97d76097-22b3-4d87-9459-ad1b90b18d2f.jpg?im_w=320"><span class="a8jt5op dir dir-ltr">Turkey</span></button><div><div class="ooa2q3t dir dir-ltr" aria-hidden="true">Turkey</div></div></div></div><div class="db6tyt8 dir dir-ltr"><div class="cbt5pty dir dir-ltr"><button class="_1xdsve6" aria-pressed="false" type="button"><img class="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/im/pictures/7e9673a5-4164-4708-a047-8d281b5980e7.jpg?im_w=320"><span class="a8jt5op dir dir-ltr">Africa</span></button><div><div class="ooa2q3t dir dir-ltr" aria-hidden="true">Africa</div></div></div></div></div></div></div></div></div></section></div></div><span class="v1ltjji6 dir dir-ltr" aria-atomic="true" aria-live="polite" role="status"></span></div></div><div class="sv3mkdx dir dir-ltr"></div><div class="chdozwg dir dir-ltr"><div class="c192dx2b dir dir-ltr"><div class="bkmyqgh b11if3v5 dir dir-ltr" role="button" tabindex="0" aria-expanded="false" data-testid="structured-search-input-field-split-dates-0"><div class="c1ykbue4 dir dir-ltr"><div class="lycybj5 dir dir-ltr">Check in</div><div class="p1gaj03r dir dir-ltr">Add dates</div></div></div></div><div class="sv3mkdx dir dir-ltr"></div><div class="c192dx2b dir dir-ltr"><div class="bkmyqgh b11if3v5 dir dir-ltr" role="button" tabindex="0" aria-expanded="false" data-testid="structured-search-input-field-split-dates-1"><div class="c1ykbue4 dir dir-ltr"><div class="lycybj5 dir dir-ltr">Check out</div><div class="p1gaj03r dir dir-ltr">Add dates</div></div></div></div></div><div class="sv3mkdx dir dir-ltr"></div><div class="c6ezw63 c1geg2ah dir dir-ltr"><div class="c192dx2b ckzf1ch dir dir-ltr"><div class="bkmyqgh b11if3v5 b1odri3w dir dir-ltr" role="button" tabindex="0" aria-expanded="false" data-testid="structured-search-input-field-guests-button"><div class="c1ykbue4 dir dir-ltr"><div class="lycybj5 dir dir-ltr">Who</div><div class="p1gaj03r dir dir-ltr">Add guests</div></div></div><div class="s1d9lc9r dir dir-ltr"><button class="brqqy3t bn27e7o dir dir-ltr" type="button" data-testid="structured-search-input-search-button"><div class="c15zc9jt dir dir-ltr"><div class=" dir dir-ltr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4px; overflow: visible;" aria-hidden="true" role="presentation" focusable="false"><path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path></svg></div><div class="lq7fgig l17fvc0l dir dir-ltr">Search</div></div></button></div></div><div><div></div></div></div></div></div></form></div></div>
+    </div> %>
+
+    <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+
+          <li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+
+          <li class ="nav-item">
+            <%= link_to "Planners",  planners_path, class: "nav-link" %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to "Messages", "#", class: "nav-link" %>
+          </li>
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
+          <li class="nav-item dropdown">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%# <%= link_to "Bookings", dashboard_path, class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+            </div>
+          </li>
+
+        <% else %>
+
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+
+        <% end %>
+
+      </ul>
+
+    </div>
+
   </div>
+
 </div>
