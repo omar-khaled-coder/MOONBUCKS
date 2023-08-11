@@ -1,0 +1,140 @@
+.title {
+  margin: 30px 0px;
+}
+
+.card-details {
+    border-radius: 5px;
+    display: flex;
+    padding: 0px 7px;
+    justify-content: space-between;
+    color: #00000073;
+}
+
+.card-description {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 0px 7px;
+}
+
+.cards-container {
+  background-color: #f8f8f8;
+  // box-shadow: 0 0 1px;
+  // border-radius: 5px;
+  // border: solid black 0px;
+  animation: ease-out;
+  transition: 0.4s;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+
+  &:hover {
+    box-shadow: 0 0 5px $gray2;
+    // scale: 1.00;
+    animation: ease;
+    transition: 0.4s;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  h3 {
+    color: black;
+    font-size: 16px;
+  }
+
+  p, a, i {
+    color: rgba(0, 0, 0, 0.56);
+
+  }
+  pt-2{
+    padding-top: 0.3rem;
+  }
+
+}
+.STAR{
+  padding-top: 0.3rem;
+}
+.image {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.card-title {
+  color: black;
+
+}
+
+.card-info {
+  color: rgb(255, 255, 255);
+  margin-bottom: 0px;
+}
+
+.card-price {
+  color: black;
+}
+
+.space {
+  // padding: 3px 0px;
+}
+
+.hover-card {
+  position: relative;
+}
+
+.hidden-text {
+  color: antiquewhite;
+  position: absolute;
+  bottom: -10px;
+  left: 15px;
+  opacity: 0;
+}
+
+.image:hover + .hidden-text {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+
+.button-center-form {
+  text-align: center;
+}
+
+.card-review {
+  padding: 60px;
+  padding-top: 40px;
+  padding-left: 40px;
+  box-sizing: 10px;
+  margin-right: 300px;
+  margin-left: 300px;
+  margin-bottom: 25px;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.cards-container-review {
+  background-color: #272727;
+  box-shadow: 0 0 4px;
+  border-radius: 5px;
+  border:  solid 1px;
+  animation: ease-out;
+  transition: 0.7s;
+}
+
+// .color-gray {
+//   color: $third;
+// }
+
+.extra-space-review {
+  padding-bottom: 30px;
+}
