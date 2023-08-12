@@ -46,8 +46,11 @@
             </div>
 
           <% end %>
-
-<%= link_to "New product", new_product_path %>
+   <% if user_signed_in? %>
+  <% if current_user.id == 1 %>
+    <%= link_to "New product", new_product_path %>
+  <% end %>
+<% end %>
 
   </div>
 </div>
