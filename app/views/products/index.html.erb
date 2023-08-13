@@ -15,10 +15,10 @@
 
                   <div class="hover-card">
                     <% if product.photos.attached? %>
-                      <%= cl_image_tag product.photos.first.key, class: "image" %>
-                    <% else %>
-                      <%= image_tag "logo.png", class: "image" %>
-                    <% end %>
+    <%= image_tag product.photos.first.url, class: "image" %>
+  <% else %>
+    <%= image_tag "logo.png", class: "image" %>
+  <% end %>
                     <%# <p class="hidden-text" style="color:white;"><%= cl_image_tag planner.profile_photo.key, class: "avatar dropdown-toggle"%>
                   </div>
 
