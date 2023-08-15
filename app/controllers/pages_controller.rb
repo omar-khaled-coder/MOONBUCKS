@@ -4,24 +4,24 @@ class PagesController < ApplicationController
   end
 
   def basket
-    puts "Params: #{params.inspect}" # Debug output
     @cart = current_user.cart || Cart.create(user_id: current_user.id)
 
-    cart_items = []
-    params.each do |key, value|
-      puts "Processing key: #{key}, value: #{value}" # Debug output
-      @product = Product.find(params[:product_id])
-      puts "Found product: #{@product.name}" # Debug output
-      cart_items << CartItem.create!(cart_id: @cart.id, quantity: value.to_i, product_id: @product.id)
-
+    if params[:product_id]
+      product = Product.find(params[:product_id])
+      CartItem.create!(cart_id: @cart.id, quantity: 1, product_id: product.id)
     end
-    @cart.save
-    @cart_items = cart_items.reject { |cart_item| cart_item.quantity == 0 }
+
+    @cart_items = @cart.cart_items.where("quantity > 0")
   end
 
+  def remove_from_cart
+    @cart = current_user.cart
+    @cart_item = @cart.cart_items.find_by(id: params[:cart_item_id])
 
+    if @cart_item
+      @cart_item.destroy
+    end
 
-
-
-
+    redirect_to basket_path
+  end
 end
