@@ -1,0 +1,133 @@
+.card-top{
+  padding: 0.7rem 5rem;
+}
+.card-top a{
+  float: left;
+  margin-top: 0.7rem;
+}
+
+.row{
+  margin: auto;
+}
+
+.upper{
+  padding: 0.2rem;
+  justify-content: space-evenly;
+  flex-direction: row;}
+
+  #three{
+  border-radius: 1rem;
+      width: 22px;
+  height: 22px;
+  margin-right:3px;
+  border: 1px solid blue;
+  text-align: center;
+  display: inline-block;
+}
+
+.icons{
+  margin-left: auto;
+}
+
+.pay-fild {
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  border-radius: 10px;
+  padding: 1vh;
+  margin-bottom: 4vh;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+.left img{
+  width: 2rem;
+}
+
+.left .col-4{
+  padding-left: 0;
+}
+
+.right .item{
+  padding: 0.3rem 0;
+}
+
+.payment-right{
+  background-color: #ffffff;
+  padding: 2vh;
+  border-radius: 12px;
+  background: #FFFFFF;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  padding-right: 6px;
+  padding-left: 0px;
+  height: 100%;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+#save_card {
+  width: unset;
+  margin-bottom: unset;
+}
+
+
+.box1 {
+  /* display: flex; */
+  /* flex-direction: column; */
+  padding: 24px;
+  gap: 32px;
+  background: #FFFFFF;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  height: 100%;
+}
+
+.vh-20 {
+  height: 20vh;
+}
+
+.right-noshadow {
+  background-color: #ffffff;
+  padding: 2vh;
+  border-radius: 12px;
+  background: #FFFFFF;
+  // box-shadow: 0px 0px 58px rgba(0, 0, 0, 0.25);
+  /* width: 463px; */
+  height: max-content;
+
+  display: flex;
+  height: 100%;
+  background-color: gray;
+  flex-direction: column;
+}
+
+.payment-right h3 {
+  margin-left: 14px;
+ }
+
+.payment-total {
+  padding-right: 27px;
+  padding-top: 30px;
+  text-align: end;
+}
+
+.expiry-date {
+  padding-left: 0;
+}
+
+.preset-items-basket {
+  height: 53vh;
+  overflow-y: scroll;
+}
+
+.button-div-basket {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.big-text {
+  font-size: 40px;
+}
