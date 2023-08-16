@@ -37,3 +37,17 @@
 //   top: 0;
 //   z-index: 1500;
 // }
+
+/* Define a class */
+.red-text {
+  cursor: pointer;
+  color: #c00; /* Set the color to red */
+}
+
+/* Apply the class to relevant elements */
+button:not(:disabled).red-text,
+[type="button"]:not(:disabled).red-text,
+[type="reset"]:not(:disabled).red-text,
+[type="submit"]:not(:disabled).red-text {
+  @extend .red-text;
+}
