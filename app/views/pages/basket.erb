@@ -2,40 +2,47 @@
   <div class="row upper"></div>
 
   <div class="row mb-5">
+
     <div class="col-12 col-lg-6 mb-5 order-2 order-lg-1 ps-0 pe-2">
+
       <div class="payment-right" style="position: relative;">
         <h3>Order Summary</h3>
+
         <div class="row item preset-items-basket" style="margin-left: 0px;">
           <div data-controller="basket-sum">
             <% if @cart_items.empty? %>
               <p>Cart is empty</p>
             <% else %>
-              <% @cart_items.each do |cart_item| %>
-                <div class="d-flex item-card align-items-center mb-2" data-basket-sum-target="sum">
-                <%= image_tag cart_item.product.photos.first.url, :width => 80, :height => 80, :crop => "fill", class: "item-image p-2" %>
-                <p class="mt-3 me-5 ps-2">
-                  <span class="item-name"><%= cart_item.product.name %></span>
-                  <br>
-                  <span class="item-description"><%= cart_item.product.short_description %></span>
-                </p>
-                <div class="cart-input ms-auto me-5 mb-3 d-flex flex-column">
-              <div class="d-flex">
-                <div>x<span data-basket-sum-target="quantity"><%= cart_item.quantity %></span></div>
-                <p class="item-price">$<span data-basket-sum-target="price"><%= cart_item.product.price %></span></p>
-<%= link_to remove_from_cart_path(cart_item_id: cart_item.id), method: :delete, class: "text-danger ms-3", remote: true do %>
-  <i class="fas fa-trash-alt"></i>
-<% end %>
+                <% @cart_items.each do |cart_item| %>
+                  <div class="d-flex item-card align-items-center mb-2" data-basket-sum-target="sum">
+                  <%= image_tag cart_item.product.photos.first.url, :width => 80, :height => 80, :crop => "fill", class: "item-image p-2" %>
+                  <p class="mt-3 me-5 ps-2">
+                    <span class="item-name"><%= cart_item.product.name %></span>
+                    <br>
+                    <span class="item-description"><%= cart_item.product.short_description %></span>
+                  </p>
+                  <div class="cart-input ms-auto me-5 mb-3 d-flex flex-column">
+                <div class="d-flex">
+                  <div>x<span data-basket-sum-target="quantity"><%= cart_item.quantity %></span></div>
+                  <p class="item-price">$<span data-basket-sum-target="price"><%= cart_item.product.price %></span></p>
 
+                  <%= link_to remove_from_cart_path(cart_item_id: cart_item.id), method: :delete, class: "text-danger ms-3", remote: true do %>
+                  <i class="fas fa-trash-alt"></i>
+                    <% end %>
+                </div>
               </div>
-</div>
 
-              <% end %>
+                <% end %>
             <% end %>
           </div>
         </div>
+
         <div class="payment-total d-flex flex-column justify-content-end card_prire_bottun_2">
           <div>Your total is: $<span id="sum"></span></div>
         </div>
+<%= link_to "Create Order", orders_path, method: :post, class: "btn btn-primary" %>
+
+
       </div>
     </div>
   </div>
