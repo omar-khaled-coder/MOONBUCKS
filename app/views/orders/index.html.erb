@@ -1,18 +1,19 @@
 <div class="main-banner2">
-  <% if !@orders.empty? %>
-    <p>Cart is empty</p>
+  <% if @orders.empty? %>
+    <p>You have no orders yet.</p>
   <% else %>
     <div class="titles-banner">
       <h1 class="main-banner-h1 text-center">Order Details</h1>
       <% @orders.each do |order| %>
         <div class="">
           <p>Ordered by: <%= order.user&.first_name.to_s + " " + order.user&.last_name.to_s %></p>
-          <p>Number of Items: <%= order.number_of_items %></p>
-          <p>Ordered on: <%= order.created_at.strftime("%B %d, %Y") %></p>
-  <%= link_to "Add to order", orders_path(cart_id: @cart.id), method: :post %></div>
+          <% order.order_items.each do |order_item| %>
+    <p>Name: <%= order_item.product.name %></p>
+
+            <!-- Display other details of the order item here -->
+          <% end %>
         </div>
       <% end %>
-
     </div>
   <% end %>
 </div>
