@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   post "/add_to_cart", to: "pages#add_to_cart"
   get '/remove_from_cart/:cart_item_id', to: 'pages#remove_from_cart', as: 'remove_from_cart'
 
-  resources :orders
+  resources :orders, only: [:index, :destroy]
+
   get 'basket/orders', to: 'orders#create', as: :cart_orders
+
 
   # Other routes...
 
