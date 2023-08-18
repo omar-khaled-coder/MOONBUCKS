@@ -2,18 +2,22 @@
   <% if @orders.empty? %>
     <p>You have no orders yet.</p>
   <% else %>
-   <div class="titles-banner">
-  <h1 class="main-banner-h1 text-center">Order Details</h1>
-  <% @orders.each do |order| %>
-    <div class="">
-      <p>Ordered by: <%= order.user&.first_name.to_s + " " + order.user&.last_name.to_s %></p>
-      <% order.order_items.each do |order_item| %>
-        <p>Name: <%= order_item.product.name %></p>
-        <!-- Display other details of the order item here -->
+    <div class="titles-banner">
+      <h1 class="main-banner-h1 text-center">Order Details</h1>
+      <% @orders.each do |order| %>
+        <div class="booking-item">
+          <p>Ordered by: <%= order.user&.first_name.to_s + " " + order.user&.last_name.to_s %></p>
+          <p>Address: <%= order.user.address %></p>
+          <p>Number: <%= order.user.contact_number %></p>
+          <p>Items: <%= order.order_items.map { |item| item.product.name }.join(", ") %></p>
+
+          <% if user_signed_in? && current_user.id == 1 %>
+<%= link_to 'Delete Order', order_path(order), method: :delete, data: { confirm: 'Are you sure you want to delete this order?' }, class: 'btn btn-danger' %>
+          <% end %>
+
+          <br> <!-- Add a line break between orders -->
+        </div>
       <% end %>
     </div>
-  <% end %>
-</div>
-
   <% end %>
 </div>

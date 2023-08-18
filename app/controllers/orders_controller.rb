@@ -1,6 +1,11 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
 
+  def show
+    @order = Order.find(params[:id])
+    # Add any code here to display the order details if needed
+  end
+
   def create
     cart = current_user.cart
     cart_items = cart.cart_items.includes(:product)
@@ -26,4 +31,27 @@ class OrdersController < ApplicationController
   def index
     @orders = current_user.orders.includes(order_items: :product)
   end
+
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+
+    redirect_to orders_path, notice: 'Order was successfully deleted.'
+  end
+
+
+  # def remove_from_order
+  #   @order = current_user.orders.find_by(id: params[:order_id])
+
+  #   if @order
+  #     @order_item = @order.order_items.find_by(id: params[:order_item_id])
+
+  #     if @order_item
+  #       @order_item.destroy
+  #     end
+  #   end
+
+  #   redirect_to orders_path, notice: 'Item was successfully removed from the order.'
+  # end
+
 end
