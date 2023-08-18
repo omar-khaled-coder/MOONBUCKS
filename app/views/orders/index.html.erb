@@ -2,18 +2,18 @@
   <% if @orders.empty? %>
     <p>You have no orders yet.</p>
   <% else %>
-    <div class="titles-banner">
-      <h1 class="main-banner-h1 text-center">Order Details</h1>
-      <% @orders.each do |order| %>
-        <div class="">
-          <p>Ordered by: <%= order.user&.first_name.to_s + " " + order.user&.last_name.to_s %></p>
-          <% order.order_items.each do |order_item| %>
-    <p>Name: <%= order_item.product.name %></p>
-
-            <!-- Display other details of the order item here -->
-          <% end %>
-        </div>
+   <div class="titles-banner">
+  <h1 class="main-banner-h1 text-center">Order Details</h1>
+  <% @orders.each do |order| %>
+    <div class="">
+      <p>Ordered by: <%= order.user&.first_name.to_s + " " + order.user&.last_name.to_s %></p>
+      <% order.order_items.each do |order_item| %>
+        <p>Name: <%= order_item.product.name %></p>
+        <!-- Display other details of the order item here -->
       <% end %>
     </div>
+  <% end %>
+</div>
+
   <% end %>
 </div>
