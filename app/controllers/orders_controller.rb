@@ -34,10 +34,12 @@ class OrdersController < ApplicationController
 
   def destroy
     @order = Order.find(params[:id])
+    @order.order_items.destroy_all
     @order.destroy
 
     redirect_to orders_path, notice: 'Order was successfully deleted.'
   end
+
 
 
   # def remove_from_order
