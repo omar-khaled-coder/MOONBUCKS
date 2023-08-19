@@ -29,8 +29,13 @@ class OrdersController < ApplicationController
   end
 
   def index
-    @orders = current_user.orders.includes(order_items: :product)
+    if current_user.id == 1
+      @orders = Order.includes(:user, order_items: :product).all
+    else
+      @orders = current_user.orders.includes(order_items: :product)
+    end
   end
+
 
   def destroy
     @order = Order.find(params[:id])
