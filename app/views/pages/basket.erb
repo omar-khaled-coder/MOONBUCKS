@@ -38,9 +38,26 @@
         </div>
 
         <div class="payment-total d-flex flex-column justify-content-end card_prire_bottun_2">
-          <div>Your total is: $<span id="sum"></span></div>
-        </div>
-<%= link_to "Create Order", cart_orders_path, method: :post, class: "btn btn-primary" %>
+  <div>Your total is: $<span id="sum"></span></div>
+</div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            // Get all the price elements and calculate the total
+            const priceElements = document.querySelectorAll('[data-basket-sum-target="price"]');
+            let total = 0;
+
+            priceElements.forEach(function(priceElement) {
+              total += parseFloat(priceElement.textContent);
+            });
+
+            // Update the sum element with the calculated total
+            const sumElement = document.getElementById('sum');
+            sumElement.textContent = total.toFixed(1); // Display the total with 2 decimal places
+          });
+        </script>
+
+        <%= link_to "Create Order", cart_orders_path, method: :post, class: "btn btn-primary" %>
 
 
       </div>
