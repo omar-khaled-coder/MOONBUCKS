@@ -2,6 +2,12 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   before_action :set_product, only: %i[ show edit update destroy ]
 
+  def search_results
+    search_query = params[:search_query]
+    puts "Search Query: #{search_query}" # Check the value in the console
+    @search_results = Product.where("name ILIKE ?", "%#{search_query}%")
+  end
+
 
   # GET /products or /products.json
   def index
