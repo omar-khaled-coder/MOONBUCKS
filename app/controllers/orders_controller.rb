@@ -44,9 +44,6 @@ class OrdersController < ApplicationController
 
     redirect_to orders_path, notice: 'Order was successfully deleted.'
   end
-
-
-
   # def remove_from_order
   #   @order = current_user.orders.find_by(id: params[:order_id])
 
